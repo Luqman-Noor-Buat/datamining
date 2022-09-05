@@ -313,12 +313,51 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Tugas 1
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-nominal-categorical">
+   Data Nominal/Categorical
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-numeric">
+   Data Numeric
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#similarity">
+   Similarity
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -330,6 +369,34 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Tugas 1
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-nominal-categorical">
+   Data Nominal/Categorical
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-numeric">
+   Data Numeric
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#similarity">
+   Similarity
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -358,7 +425,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-ff330e0d-3c14-4aa1-b06c-84c609c7eba7">
+  <div id="df-883d8f8b-2c25-4115-85f5-ca8af3e4bc1c">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -453,7 +520,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-ff330e0d-3c14-4aa1-b06c-84c609c7eba7')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-883d8f8b-2c25-4115-85f5-ca8af3e4bc1c')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -504,12 +571,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-ff330e0d-3c14-4aa1-b06c-84c609c7eba7 button.colab-df-convert');
+          document.querySelector('#df-883d8f8b-2c25-4115-85f5-ca8af3e4bc1c button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-ff330e0d-3c14-4aa1-b06c-84c609c7eba7');
+          const element = document.querySelector('#df-883d8f8b-2c25-4115-85f5-ca8af3e4bc1c');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -543,7 +610,9 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>Data Nominal/Categorical</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="data-nominal-categorical">
+<h1>Data Nominal/Categorical<a class="headerlink" href="#data-nominal-categorical" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menampilkan data Nominal/Categorical</span>
@@ -553,7 +622,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-ce9e5b06-3913-4ead-88ff-33d91d5f70dc">
+  <div id="df-cdb2f3b9-86f6-4a96-85b7-17699caa0b8f">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -618,7 +687,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-ce9e5b06-3913-4ead-88ff-33d91d5f70dc')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-cdb2f3b9-86f6-4a96-85b7-17699caa0b8f')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -669,12 +738,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-ce9e5b06-3913-4ead-88ff-33d91d5f70dc button.colab-df-convert');
+          document.querySelector('#df-cdb2f3b9-86f6-4a96-85b7-17699caa0b8f button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-ce9e5b06-3913-4ead-88ff-33d91d5f70dc');
+          const element = document.querySelector('#df-cdb2f3b9-86f6-4a96-85b7-17699caa0b8f');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -727,7 +796,9 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>Data Numeric</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="data-numeric">
+<h1>Data Numeric<a class="headerlink" href="#data-numeric" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menampilkan data numeric</span>
@@ -737,7 +808,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-c7dca824-2e44-45e5-9436-f36f8fcbf573">
+  <div id="df-331ed3bb-da66-4c14-a47c-256f69ff6612">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -808,7 +879,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-c7dca824-2e44-45e5-9436-f36f8fcbf573')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-331ed3bb-da66-4c14-a47c-256f69ff6612')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -859,12 +930,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-c7dca824-2e44-45e5-9436-f36f8fcbf573 button.colab-df-convert');
+          document.querySelector('#df-331ed3bb-da66-4c14-a47c-256f69ff6612 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-c7dca824-2e44-45e5-9436-f36f8fcbf573');
+          const element = document.querySelector('#df-331ed3bb-da66-4c14-a47c-256f69ff6612');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -893,7 +964,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-6c7007b6-f01d-4673-a293-d2be50fa87cd">
+  <div id="df-463c8a3c-c227-4d84-b002-e216adf30037">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -988,7 +1059,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-6c7007b6-f01d-4673-a293-d2be50fa87cd')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-463c8a3c-c227-4d84-b002-e216adf30037')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1039,12 +1110,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-6c7007b6-f01d-4673-a293-d2be50fa87cd button.colab-df-convert');
+          document.querySelector('#df-463c8a3c-c227-4d84-b002-e216adf30037 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-6c7007b6-f01d-4673-a293-d2be50fa87cd');
+          const element = document.querySelector('#df-463c8a3c-c227-4d84-b002-e216adf30037');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1067,43 +1138,162 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">statistics</span>
-<span class="c1"># Mencari rata-rata RAM_GB</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">statistics</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">mobile</span><span class="p">[</span><span class="s2">&quot;RAM_GB&quot;</span><span class="p">]))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Normalisasi RAM_GB</span>
+<span class="n">std1</span> <span class="o">=</span> <span class="mf">2.920372</span>
+<span class="n">mean1</span> <span class="o">=</span> <span class="mf">5.142857</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">col1</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;RAM_GB&quot;</span><span class="p">]:</span>
+  <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">4</span><span class="p">:</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">data1</span> <span class="o">=</span> <span class="n">mobile</span><span class="p">[</span><span class="n">col1</span><span class="p">]</span>
+    <span class="n">hasil1</span> <span class="o">=</span> <span class="p">(</span><span class="n">data1</span><span class="o">-</span><span class="n">mean1</span><span class="p">)</span><span class="o">/</span><span class="n">std1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">hasil1</span><span class="p">)</span>
 
-<span class="c1"># Mencari rata-rata ROM_GB</span>
+<span class="c1"># Normalisasi ROM_GB</span>
+<span class="n">std2</span> <span class="o">=</span> <span class="mf">62.026722</span>
+<span class="n">mean2</span> <span class="o">=</span> <span class="mf">93.714286</span>
+<span class="k">for</span> <span class="n">col2</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;ROM_GB&quot;</span><span class="p">]:</span>
+    <span class="n">data2</span> <span class="o">=</span> <span class="n">mobile</span><span class="p">[</span><span class="n">col2</span><span class="p">]</span>
+    <span class="n">hasil2</span> <span class="o">=</span> <span class="p">(</span><span class="n">data2</span><span class="o">-</span><span class="n">mean2</span><span class="p">)</span><span class="o">/</span><span class="n">std2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">hasil2</span><span class="p">)</span>
 
-<span class="c1"># Mencari rata-rata Latest_Price_Taka</span>
+<span class="c1"># Normalisasi Latest_Price_Taka</span>
+<span class="n">std3</span> <span class="o">=</span> <span class="mf">36891.663754</span>	
+<span class="n">mean3</span> <span class="o">=</span> <span class="mf">37610.952381</span>	
+<span class="k">for</span> <span class="n">col3</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Latest_Price_Taka&quot;</span><span class="p">]:</span>
+    <span class="n">data3</span> <span class="o">=</span> <span class="n">mobile</span><span class="p">[</span><span class="n">col3</span><span class="p">]</span>
+    <span class="n">hasil3</span> <span class="o">=</span> <span class="p">(</span><span class="n">data3</span><span class="o">-</span><span class="n">mean3</span><span class="p">)</span><span class="o">/</span><span class="n">std3</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">hasil3</span><span class="p">)</span>
 
-<span class="c1"># Mencari rata-rata Discount</span>
+<span class="c1"># Normalisasi Discount</span>
+<span class="n">std4</span> <span class="o">=</span> <span class="mf">766.097097</span>
+<span class="n">mean4</span> <span class="o">=</span> <span class="mf">1940.476190</span>	
+<span class="k">for</span> <span class="n">col4</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Discount&quot;</span><span class="p">]:</span>
+    <span class="n">data4</span> <span class="o">=</span> <span class="n">mobile</span><span class="p">[</span><span class="n">col4</span><span class="p">]</span>
+    <span class="n">hasil4</span> <span class="o">=</span> <span class="p">(</span><span class="n">data4</span><span class="o">-</span><span class="n">mean4</span><span class="p">)</span><span class="o">/</span><span class="n">std4</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">hasil4</span><span class="p">)</span>
 
-<span class="c1"># Mencari rata-rata Selling_Price</span>
+<span class="c1"># Normalisasi Selling_Price</span>
+<span class="n">std5</span> <span class="o">=</span> <span class="mf">36284.165145</span>
+<span class="n">mean5</span> <span class="o">=</span> <span class="mf">35670.476190</span>
+<span class="k">for</span> <span class="n">col5</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Selling_Price&quot;</span><span class="p">]:</span>
+    <span class="n">data5</span> <span class="o">=</span> <span class="n">mobile</span><span class="p">[</span><span class="n">col5</span><span class="p">]</span>
+    <span class="n">hasil5</span> <span class="o">=</span> <span class="p">(</span><span class="n">data5</span><span class="o">-</span><span class="n">mean5</span><span class="p">)</span><span class="o">/</span><span class="n">std5</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">hasil5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.142857142857143
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mencari standart deviasi RAM_GB</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">statistics</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">mobile</span><span class="p">[</span><span class="s2">&quot;RAM_GB&quot;</span><span class="p">]))</span>
-
-<span class="c1"># Mencari standart deviasi ROM_GB</span>
-
-<span class="c1"># Mencari standart deviasi Latest_Price_Taka</span>
-
-<span class="c1"># Mencari standart deviasi Discount</span>
-
-<span class="c1"># Mencari standart deviasi Selling_Price</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.9203717962909157
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     0.978349
+1     2.348038
+2     0.978349
+3     0.293505
+4     0.293505
+5     0.978349
+6     0.293505
+7     0.293505
+8     0.293505
+9     0.293505
+10    0.293505
+11    0.293505
+12    0.293505
+13    0.293505
+14   -0.733762
+15   -0.733762
+16   -1.076184
+17   -1.076184
+18   -1.076184
+19   -1.761028
+20   -1.761028
+Name: RAM_GB, dtype: float64
+0     2.616384
+1     0.552757
+2     0.552757
+3     0.552757
+4     0.552757
+5     0.552757
+6     0.552757
+7     0.552757
+8     0.552757
+9     0.552757
+10    0.552757
+11   -0.479056
+12   -0.479056
+13    0.552757
+14   -0.479056
+15   -0.994963
+16   -0.994963
+17   -0.994963
+18   -1.252916
+19   -1.510870
+20   -1.510870
+Name: ROM_GB, dtype: float64
+0     2.639839
+1     2.501623
+2     1.284519
+3     0.498434
+4     0.227126
+5     0.146051
+6     0.037381
+7     0.037381
+8    -0.260545
+9    -0.274343
+10   -0.274343
+11   -0.423157
+12   -0.477640
+13   -0.539714
+14   -0.585822
+15   -0.585822
+16   -0.667141
+17   -0.667141
+18   -0.748460
+19   -0.923270
+20   -0.944955
+Name: Latest_Price_Taka, dtype: float64
+0     1.383015
+1     1.383015
+2     1.383015
+3     0.730356
+4     0.730356
+5     0.730356
+6     0.730356
+7     0.730356
+8     0.077697
+9     0.077697
+10    0.077697
+11    0.077697
+12    0.077697
+13   -0.574961
+14   -0.574961
+15   -0.574961
+16   -0.574961
+17   -0.574961
+18   -1.227620
+19   -1.880279
+20   -2.206608
+Name: Discount, dtype: float64
+0     2.654836
+1     2.514307
+2     1.276825
+3     0.491358
+4     0.215508
+5     0.133075
+6     0.022586
+7     0.022586
+8    -0.266548
+9    -0.280576
+10   -0.280576
+11   -0.431882
+12   -0.487278
+13   -0.536611
+14   -0.583491
+15   -0.583491
+16   -0.666171
+17   -0.666171
+18   -0.735072
+19   -0.899028
+20   -0.914186
+Name: Selling_Price, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -1113,8 +1303,8 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghitung jarak data Numeric dengan cara Euclidean</span>
 <span class="k">def</span> <span class="nf">d2</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">h</span><span class="p">):</span>
     <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;RAM_GB&quot;</span><span class="p">,</span> <span class="s2">&quot;ROM_GB&quot;</span><span class="p">,</span> <span class="s2">&quot;Latest_Price_Taka&quot;</span><span class="p">,</span> <span class="s2">&quot;Discount&quot;</span><span class="p">,</span> <span class="s2">&quot;Selling_Price&quot;</span><span class="p">]:</span>
-        <span class="n">result</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">mobile</span><span class="p">[</span><span class="n">col</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">mobile</span><span class="p">[</span><span class="n">col</span><span class="p">][</span><span class="n">j</span><span class="p">]),</span> <span class="n">h</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="p">[</span><span class="n">hasil1</span><span class="p">,</span> <span class="n">hasil2</span><span class="p">,</span> <span class="n">hasil3</span><span class="p">,</span> <span class="n">hasil4</span><span class="p">,</span> <span class="n">hasil5</span><span class="p">]:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">col</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">col</span><span class="p">[</span><span class="n">j</span><span class="p">]),</span> <span class="n">h</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">result</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">h</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1130,14 +1320,16 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>44901.0
-73401.0
-83410.0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.2374819654955576
+2.0229485701730345
+2.298798929689416
 </pre></div>
 </div>
 </div>
 </div>
-<p>Similarity</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="similarity">
+<h1>Similarity<a class="headerlink" href="#similarity" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Jarak d(1,2)</span>
@@ -1146,7 +1338,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>44901.25
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.4874819654955576
 </pre></div>
 </div>
 </div>
@@ -1159,7 +1351,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>73401.25
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.2729485701730345
 </pre></div>
 </div>
 </div>
@@ -1172,7 +1364,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>83410.25
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.548798929689416
 </pre></div>
 </div>
 </div>
