@@ -427,6 +427,50 @@ title="Print to PDF"
 <p>Nama : Luqman Noor Buat <br>
 NIM    : 200411100206 <br>
 Kelas  : Penambangan Data C</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">d5df0069828e</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/google/colab/drive.py</span> in <span class="ni">mount</span><span class="nt">(mountpoint, force_remount, timeout_ms)</span>
+<span class="g g-Whitespace">    </span><span class="mi">103</span>       <span class="n">force_remount</span><span class="o">=</span><span class="n">force_remount</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">104</span>       <span class="n">timeout_ms</span><span class="o">=</span><span class="n">timeout_ms</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">105</span>       <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">106</span> 
+<span class="g g-Whitespace">    </span><span class="mi">107</span> 
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/google/colab/drive.py</span> in <span class="ni">_mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, ephemeral)</span>
+<span class="g g-Whitespace">    </span><span class="mi">118</span>   <span class="k">if</span> <span class="n">ephemeral</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">119</span>     <span class="n">_message</span><span class="o">.</span><span class="n">blocking_request</span><span class="p">(</span>
+<span class="ne">--&gt; </span><span class="mi">120</span>         <span class="s1">&#39;request_auth&#39;</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;authType&#39;</span><span class="p">:</span> <span class="s1">&#39;dfs_ephemeral&#39;</span><span class="p">},</span> <span class="n">timeout_sec</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">121</span> 
+<span class="g g-Whitespace">    </span><span class="mi">122</span>   <span class="n">mountpoint</span> <span class="o">=</span> <span class="n">_os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">mountpoint</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/google/colab/_message.py</span> in <span class="ni">blocking_request</span><span class="nt">(request_type, request, timeout_sec, parent)</span>
+<span class="g g-Whitespace">    </span><span class="mi">169</span>   <span class="n">request_id</span> <span class="o">=</span> <span class="n">send_request</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">170</span>       <span class="n">request_type</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span> <span class="n">expect_reply</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">171</span>   <span class="k">return</span> <span class="n">read_reply_from_input</span><span class="p">(</span><span class="n">request_id</span><span class="p">,</span> <span class="n">timeout_sec</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/google/colab/_message.py</span> in <span class="ni">read_reply_from_input</span><span class="nt">(message_id, timeout_sec)</span>
+<span class="g g-Whitespace">     </span><span class="mi">95</span>     <span class="n">reply</span> <span class="o">=</span> <span class="n">_read_next_input_message</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">96</span>     <span class="k">if</span> <span class="n">reply</span> <span class="o">==</span> <span class="n">_NOT_READY</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">reply</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">97</span>       <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.025</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">98</span>       <span class="k">continue</span>
+<span class="g g-Whitespace">     </span><span class="mi">99</span>     <span class="k">if</span> <span class="p">(</span><span class="n">reply</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;type&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;colab_reply&#39;</span> <span class="ow">and</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="tugas-1-menghitung-jarak">
 <h1>Tugas 1 - Menghitung jarak<a class="headerlink" href="#tugas-1-menghitung-jarak" title="Permalink to this headline">#</a></h1>
@@ -449,7 +493,7 @@ Kelas  : Penambangan Data C</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-e26da591-d965-4d07-91fd-457dda7d7d16">
+  <div id="df-2a9cd126-907b-4303-b316-714ccc39333b">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -544,7 +588,7 @@ Kelas  : Penambangan Data C</p>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-e26da591-d965-4d07-91fd-457dda7d7d16')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-2a9cd126-907b-4303-b316-714ccc39333b')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -595,12 +639,12 @@ Kelas  : Penambangan Data C</p>
 
       <script>
         const buttonEl =
-          document.querySelector('#df-e26da591-d965-4d07-91fd-457dda7d7d16 button.colab-df-convert');
+          document.querySelector('#df-2a9cd126-907b-4303-b316-714ccc39333b button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-e26da591-d965-4d07-91fd-457dda7d7d16');
+          const element = document.querySelector('#df-2a9cd126-907b-4303-b316-714ccc39333b');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -636,6 +680,7 @@ Kelas  : Penambangan Data C</p>
 </div>
 <section id="data-nominal-categorical">
 <h2>Data Nominal/Categorical<a class="headerlink" href="#data-nominal-categorical" title="Permalink to this headline">#</a></h2>
+<p>Nilai atribut nominal adalah simbol ataunama barang. Setiap nilai mewakili beberapa jenis kategori, kode, atau status, dan Atribut nominal juga disebut kategori. Nilai-nilainya tidak memiliki tingkatan nilai. Dalam ilmu komputer, nilainya juga dikenal sebagai enumerasi</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menampilkan data Nominal/Categorical</span>
@@ -645,7 +690,7 @@ Kelas  : Penambangan Data C</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-b841b69b-16cb-40dd-9be4-75c60ffb31d2">
+  <div id="df-e280c979-7387-4f15-9a8f-3e6734685afa">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -710,7 +755,7 @@ Kelas  : Penambangan Data C</p>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-b841b69b-16cb-40dd-9be4-75c60ffb31d2')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-e280c979-7387-4f15-9a8f-3e6734685afa')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -761,12 +806,12 @@ Kelas  : Penambangan Data C</p>
 
       <script>
         const buttonEl =
-          document.querySelector('#df-b841b69b-16cb-40dd-9be4-75c60ffb31d2 button.colab-df-convert');
+          document.querySelector('#df-e280c979-7387-4f15-9a8f-3e6734685afa button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-b841b69b-16cb-40dd-9be4-75c60ffb31d2');
+          const element = document.querySelector('#df-e280c979-7387-4f15-9a8f-3e6734685afa');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -787,6 +832,8 @@ Kelas  : Penambangan Data C</p>
   </div>
 </div></div>
 </div>
+<p>Melakukan perhitungan berdasarkan pada data nominal <br>
+![nominal.png](data:image/png;base64,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)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghitung jarak data Nominal/categorical</span>
@@ -822,6 +869,7 @@ Kelas  : Penambangan Data C</p>
 </section>
 <section id="data-numeric">
 <h2>Data Numeric<a class="headerlink" href="#data-numeric" title="Permalink to this headline">#</a></h2>
+<p>Atribut numerik bersifat kuantitatif; Artinya, ini adalah kuantitas yang terukur, yang dinyatakan dengan bilangan bulat atau nilai riel. Atribut numerik dapat Atribut Skala Interval(interval-scaled) atau skala ration (ratio-scaled)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menampilkan data numeric</span>
@@ -831,7 +879,7 @@ Kelas  : Penambangan Data C</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-9a6bdd50-06ed-4891-b380-b685986f5263">
+  <div id="df-b373b472-c5bb-4ac1-ac74-da038ebec3a0">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -902,7 +950,7 @@ Kelas  : Penambangan Data C</p>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-9a6bdd50-06ed-4891-b380-b685986f5263')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-b373b472-c5bb-4ac1-ac74-da038ebec3a0')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -953,12 +1001,12 @@ Kelas  : Penambangan Data C</p>
 
       <script>
         const buttonEl =
-          document.querySelector('#df-9a6bdd50-06ed-4891-b380-b685986f5263 button.colab-df-convert');
+          document.querySelector('#df-b373b472-c5bb-4ac1-ac74-da038ebec3a0 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-9a6bdd50-06ed-4891-b380-b685986f5263');
+          const element = document.querySelector('#df-b373b472-c5bb-4ac1-ac74-da038ebec3a0');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -988,7 +1036,7 @@ Kelas  : Penambangan Data C</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-cf739e33-d057-44cc-b2d7-cd12a5a9a69a">
+  <div id="df-b30b8b9a-bef7-434d-8230-51bbdb041f47">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1083,7 +1131,7 @@ Kelas  : Penambangan Data C</p>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-cf739e33-d057-44cc-b2d7-cd12a5a9a69a')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-b30b8b9a-bef7-434d-8230-51bbdb041f47')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1134,12 +1182,12 @@ Kelas  : Penambangan Data C</p>
 
       <script>
         const buttonEl =
-          document.querySelector('#df-cf739e33-d057-44cc-b2d7-cd12a5a9a69a button.colab-df-convert');
+          document.querySelector('#df-b30b8b9a-bef7-434d-8230-51bbdb041f47 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-cf739e33-d057-44cc-b2d7-cd12a5a9a69a');
+          const element = document.querySelector('#df-b30b8b9a-bef7-434d-8230-51bbdb041f47');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1160,10 +1208,11 @@ Kelas  : Penambangan Data C</p>
   </div>
 </div></div>
 </div>
+<p>Karena datanya tidak konsisten maka, data perlu dilakukan normalisasi menggunakan rumus berikut <br>
+![normalisasi.png](data:image/png;base64,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)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Karena datanya tidak konsisten maka, data perlu dilakukan normalisasi</span>
-<span class="c1"># Normalisasi data RAM_GB</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Normalisasi data RAM_GB</span>
 <span class="n">std1</span> <span class="o">=</span> <span class="mf">2.920372</span>
 <span class="n">mean1</span> <span class="o">=</span> <span class="mf">5.142857</span>
 <span class="k">for</span> <span class="n">col1</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;RAM_GB&quot;</span><span class="p">]:</span>
@@ -1320,9 +1369,11 @@ Name: Selling_Price, dtype: float64
 </div>
 </div>
 </div>
+<p>Melakukan perhitungan berdasarkan rumus Euclidean Distance <br>
+![12.png](data:image/png;base64,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)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghitung jarak data Numeric dengan cara Euclidean</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghitung jarak data Numeric dengan cara Euclidean Distance</span>
 <span class="k">def</span> <span class="nf">d2</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">h</span><span class="p">):</span>
     <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="p">[</span><span class="n">hasil1</span><span class="p">,</span> <span class="n">hasil2</span><span class="p">,</span> <span class="n">hasil3</span><span class="p">,</span> <span class="n">hasil4</span><span class="p">,</span> <span class="n">hasil5</span><span class="p">]:</span>
@@ -1415,7 +1466,7 @@ Name: Selling_Price, dtype: float64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-871b8cab-1d3c-4042-beb3-2950aa2d3796">
+  <div id="df-2a1ba7b5-bf66-4e8e-81c6-2fa830c01d89">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1486,7 +1537,7 @@ Name: Selling_Price, dtype: float64
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-871b8cab-1d3c-4042-beb3-2950aa2d3796')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-2a1ba7b5-bf66-4e8e-81c6-2fa830c01d89')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1537,12 +1588,12 @@ Name: Selling_Price, dtype: float64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-871b8cab-1d3c-4042-beb3-2950aa2d3796 button.colab-df-convert');
+          document.querySelector('#df-2a1ba7b5-bf66-4e8e-81c6-2fa830c01d89 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-871b8cab-1d3c-4042-beb3-2950aa2d3796');
+          const element = document.querySelector('#df-2a1ba7b5-bf66-4e8e-81c6-2fa830c01d89');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1729,39 +1780,7 @@ Name: petal_width, Length: 150, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">26</span><span class="o">-</span><span class="mf">69e6414</span><span class="n">e2e16</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Mount drive</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/google/colab/drive.py</span> in <span class="ni">mount</span><span class="nt">(mountpoint, force_remount, timeout_ms)</span>
-<span class="g g-Whitespace">    </span><span class="mi">103</span>       <span class="n">force_remount</span><span class="o">=</span><span class="n">force_remount</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">104</span>       <span class="n">timeout_ms</span><span class="o">=</span><span class="n">timeout_ms</span><span class="p">,</span>
-<span class="ne">--&gt; </span><span class="mi">105</span>       <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">106</span> 
-<span class="g g-Whitespace">    </span><span class="mi">107</span> 
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/google/colab/drive.py</span> in <span class="ni">_mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, ephemeral)</span>
-<span class="g g-Whitespace">    </span><span class="mi">118</span>   <span class="k">if</span> <span class="n">ephemeral</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">119</span>     <span class="n">_message</span><span class="o">.</span><span class="n">blocking_request</span><span class="p">(</span>
-<span class="ne">--&gt; </span><span class="mi">120</span>         <span class="s1">&#39;request_auth&#39;</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;authType&#39;</span><span class="p">:</span> <span class="s1">&#39;dfs_ephemeral&#39;</span><span class="p">},</span> <span class="n">timeout_sec</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">121</span> 
-<span class="g g-Whitespace">    </span><span class="mi">122</span>   <span class="n">mountpoint</span> <span class="o">=</span> <span class="n">_os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">mountpoint</span><span class="p">)</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/google/colab/_message.py</span> in <span class="ni">blocking_request</span><span class="nt">(request_type, request, timeout_sec, parent)</span>
-<span class="g g-Whitespace">    </span><span class="mi">169</span>   <span class="n">request_id</span> <span class="o">=</span> <span class="n">send_request</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">170</span>       <span class="n">request_type</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span> <span class="n">expect_reply</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">171</span>   <span class="k">return</span> <span class="n">read_reply_from_input</span><span class="p">(</span><span class="n">request_id</span><span class="p">,</span> <span class="n">timeout_sec</span><span class="p">)</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/google/colab/_message.py</span> in <span class="ni">read_reply_from_input</span><span class="nt">(message_id, timeout_sec)</span>
-<span class="g g-Whitespace">     </span><span class="mi">95</span>     <span class="n">reply</span> <span class="o">=</span> <span class="n">_read_next_input_message</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">96</span>     <span class="k">if</span> <span class="n">reply</span> <span class="o">==</span> <span class="n">_NOT_READY</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">reply</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">97</span>       <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.025</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">98</span>       <span class="k">continue</span>
-<span class="g g-Whitespace">     </span><span class="mi">99</span>     <span class="k">if</span> <span class="p">(</span><span class="n">reply</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;type&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;colab_reply&#39;</span> <span class="ow">and</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount(&quot;/content/drive&quot;, force_remount=True).
 </pre></div>
 </div>
 </div>
