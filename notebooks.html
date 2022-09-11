@@ -1447,8 +1447,8 @@ Name: Selling_Price, dtype: float64
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import liberary yang diperlukan</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
-<span class="kn">import</span> <span class="nn">math</span>
 <span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
 </div>
@@ -1463,7 +1463,7 @@ Name: Selling_Price, dtype: float64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-2a1ba7b5-bf66-4e8e-81c6-2fa830c01d89">
+  <div id="df-68cb53c1-5266-457d-8487-3a6b12632046">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1534,7 +1534,7 @@ Name: Selling_Price, dtype: float64
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-2a1ba7b5-bf66-4e8e-81c6-2fa830c01d89')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-68cb53c1-5266-457d-8487-3a6b12632046')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1585,12 +1585,12 @@ Name: Selling_Price, dtype: float64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-2a1ba7b5-bf66-4e8e-81c6-2fa830c01d89 button.colab-df-convert');
+          document.querySelector('#df-68cb53c1-5266-457d-8487-3a6b12632046 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-2a1ba7b5-bf66-4e8e-81c6-2fa830c01d89');
+          const element = document.querySelector('#df-68cb53c1-5266-457d-8487-3a6b12632046');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1768,52 +1768,16 @@ Name: petal_width, Length: 150, dtype: float64
 </div>
 </div>
 </div>
+<p>Data pada dataframe telah terdiskritisasi. Namun hasil diskritisasi masih berupa angka. Maka akan di lakukan proses kembali agar hasil diskritisasi menjadi huruf A, B, C, dan D</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mount drive</span>
-<span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
-<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount(&quot;/content/drive&quot;, force_remount=True).
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mengatur tempat penyimpanan untuk file csv dari hasil diskritisasi</span>
-<span class="o">%</span><span class="k">cd</span> /content/drive/MyDrive/UNIVERSITAS TRUNOJOYO MADURA/SEMESTER 5/datamining/
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/content/drive/MyDrive/UNIVERSITAS TRUNOJOYO MADURA/SEMESTER 5/datamining
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menyimpan hasil diskritisasi ke dalam file csv dengan nama diskritisasi_iris.csv</span>
-<span class="n">iris</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;diskritisasi_iris.csv&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Membaca file hasil dari Diskritisasi</span>
-<span class="n">iris2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/content/drive/MyDrive/UNIVERSITAS TRUNOJOYO MADURA/SEMESTER 5/datamining/diskritisasi_iris.csv&quot;</span><span class="p">)</span>
-<span class="n">iris2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iris</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-fa3cbd2b-12bd-46bc-8dbe-9b01eba7f7cd">
+  <div id="df-52daaf81-fa6c-41b3-8903-a065cef542af">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1833,7 +1797,6 @@ Name: petal_width, Length: 150, dtype: float64
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Unnamed: 0</th>
       <th>sepal_length</th>
       <th>sepal_width</th>
       <th>petal_length</th>
@@ -1844,7 +1807,6 @@ Name: petal_width, Length: 150, dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0</td>
       <td>0.0</td>
       <td>2.0</td>
       <td>0.0</td>
@@ -1853,7 +1815,6 @@ Name: petal_width, Length: 150, dtype: float64
     </tr>
     <tr>
       <th>1</th>
-      <td>1</td>
       <td>0.0</td>
       <td>1.0</td>
       <td>0.0</td>
@@ -1862,7 +1823,6 @@ Name: petal_width, Length: 150, dtype: float64
     </tr>
     <tr>
       <th>2</th>
-      <td>2</td>
       <td>0.0</td>
       <td>2.0</td>
       <td>0.0</td>
@@ -1871,7 +1831,6 @@ Name: petal_width, Length: 150, dtype: float64
     </tr>
     <tr>
       <th>3</th>
-      <td>3</td>
       <td>0.0</td>
       <td>1.0</td>
       <td>0.0</td>
@@ -1880,7 +1839,6 @@ Name: petal_width, Length: 150, dtype: float64
     </tr>
     <tr>
       <th>4</th>
-      <td>4</td>
       <td>0.0</td>
       <td>2.0</td>
       <td>0.0</td>
@@ -1890,7 +1848,7 @@ Name: petal_width, Length: 150, dtype: float64
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-fa3cbd2b-12bd-46bc-8dbe-9b01eba7f7cd')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-52daaf81-fa6c-41b3-8903-a065cef542af')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1941,12 +1899,657 @@ Name: petal_width, Length: 150, dtype: float64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-fa3cbd2b-12bd-46bc-8dbe-9b01eba7f7cd button.colab-df-convert');
+          document.querySelector('#df-52daaf81-fa6c-41b3-8903-a065cef542af button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-fa3cbd2b-12bd-46bc-8dbe-9b01eba7f7cd');
+          const element = document.querySelector('#df-52daaf81-fa6c-41b3-8903-a065cef542af');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Proses mengubah dataframe menjadi array</span>
+<span class="n">sepal_length</span> <span class="o">=</span> <span class="n">iris</span><span class="p">[</span><span class="s2">&quot;sepal_length&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">sepal_width</span> <span class="o">=</span> <span class="n">iris</span><span class="p">[</span><span class="s2">&quot;sepal_width&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">petal_length</span> <span class="o">=</span> <span class="n">iris</span><span class="p">[</span><span class="s2">&quot;petal_length&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">petal_width</span> <span class="o">=</span> <span class="n">iris</span><span class="p">[</span><span class="s2">&quot;petal_width&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menggolongkan tiap nilai tertentu ke dalam huruf tertentu</span>
+<span class="n">iris_sepal_length</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="n">sepal_length</span><span class="p">):</span>
+  <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mf">0.</span><span class="p">:</span>
+    <span class="n">iris_sepal_length</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+  <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mf">1.</span><span class="p">:</span>
+    <span class="n">iris_sepal_length</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">)</span>
+  <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mf">2.</span><span class="p">:</span>
+    <span class="n">iris_sepal_length</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;C&quot;</span><span class="p">)</span>
+  <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mf">3.</span><span class="p">:</span>
+    <span class="n">iris_sepal_length</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;D&quot;</span><span class="p">)</span>
+
+<span class="n">iris_sepal_width</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="n">sepal_width</span><span class="p">):</span>
+  <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mf">0.</span><span class="p">:</span>
+    <span class="n">iris_sepal_width</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+  <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mf">1.</span><span class="p">:</span>
+    <span class="n">iris_sepal_width</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">)</span>
+  <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mf">2.</span><span class="p">:</span>
+    <span class="n">iris_sepal_width</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;C&quot;</span><span class="p">)</span>
+  <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mf">3.</span><span class="p">:</span>
+    <span class="n">iris_sepal_width</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;D&quot;</span><span class="p">)</span>
+
+<span class="n">iris_petal_length</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="n">petal_length</span><span class="p">):</span>
+  <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mf">0.</span><span class="p">:</span>
+    <span class="n">iris_petal_length</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+  <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mf">1.</span><span class="p">:</span>
+    <span class="n">iris_petal_length</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">)</span>
+  <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mf">2.</span><span class="p">:</span>
+    <span class="n">iris_petal_length</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;C&quot;</span><span class="p">)</span>
+  <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mf">3.</span><span class="p">:</span>
+    <span class="n">iris_petal_length</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;D&quot;</span><span class="p">)</span>
+
+<span class="n">iris_petal_width</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="n">petal_width</span><span class="p">):</span>
+  <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mf">0.</span><span class="p">:</span>
+    <span class="n">iris_petal_width</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+  <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mf">1.</span><span class="p">:</span>
+    <span class="n">iris_petal_width</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">)</span>
+  <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mf">2.</span><span class="p">:</span>
+    <span class="n">iris_petal_width</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;C&quot;</span><span class="p">)</span>
+  <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mf">3.</span><span class="p">:</span>
+    <span class="n">iris_petal_width</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;D&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menampilkan salah satu array apakah penggolongan hurufnya berhasil atau tidak</span>
+<span class="n">iris_sepal_length</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;A&#39;,
+ &#39;A&#39;,
+ &#39;A&#39;,
+ &#39;A&#39;,
+ &#39;A&#39;,
+ &#39;B&#39;,
+ &#39;A&#39;,
+ &#39;A&#39;,
+ &#39;A&#39;,
+ &#39;A&#39;,
+ &#39;B&#39;,
+ &#39;A&#39;,
+ &#39;A&#39;,
+ &#39;A&#39;,
+ &#39;B&#39;,
+ &#39;B&#39;,
+ &#39;B&#39;,
+ &#39;A&#39;,
+ &#39;B&#39;,
+ &#39;A&#39;,
+ &#39;B&#39;,
+ &#39;A&#39;,
+ &#39;A&#39;,
+ &#39;A&#39;,
+ &#39;A&#39;,
+ &#39;A&#39;,
+ &#39;A&#39;,
+ &#39;B&#39;,
+ &#39;B&#39;,
+ &#39;A&#39;,
+ &#39;A&#39;,
+ &#39;B&#39;,
+ &#39;B&#39;,
+ &#39;B&#39;,
+ &#39;A&#39;,
+ &#39;A&#39;,
+ &#39;B&#39;,
+ &#39;A&#39;,
+ &#39;A&#39;,
+ &#39;A&#39;,
+ &#39;A&#39;,
+ &#39;A&#39;,
+ &#39;A&#39;,
+ &#39;A&#39;,
+ &#39;A&#39;,
+ &#39;A&#39;,
+ &#39;A&#39;,
+ &#39;A&#39;,
+ &#39;B&#39;,
+ &#39;A&#39;,
+ &#39;D&#39;,
+ &#39;C&#39;,
+ &#39;C&#39;,
+ &#39;B&#39;,
+ &#39;C&#39;,
+ &#39;B&#39;,
+ &#39;C&#39;,
+ &#39;A&#39;,
+ &#39;C&#39;,
+ &#39;B&#39;,
+ &#39;A&#39;,
+ &#39;B&#39;,
+ &#39;B&#39;,
+ &#39;C&#39;,
+ &#39;B&#39;,
+ &#39;C&#39;,
+ &#39;B&#39;,
+ &#39;B&#39;,
+ &#39;C&#39;,
+ &#39;B&#39;,
+ &#39;B&#39;,
+ &#39;C&#39;,
+ &#39;C&#39;,
+ &#39;C&#39;,
+ &#39;C&#39;,
+ &#39;C&#39;,
+ &#39;C&#39;,
+ &#39;C&#39;,
+ &#39;B&#39;,
+ &#39;B&#39;,
+ &#39;B&#39;,
+ &#39;B&#39;,
+ &#39;B&#39;,
+ &#39;B&#39;,
+ &#39;B&#39;,
+ &#39;B&#39;,
+ &#39;C&#39;,
+ &#39;C&#39;,
+ &#39;B&#39;,
+ &#39;B&#39;,
+ &#39;B&#39;,
+ &#39;C&#39;,
+ &#39;B&#39;,
+ &#39;A&#39;,
+ &#39;B&#39;,
+ &#39;B&#39;,
+ &#39;B&#39;,
+ &#39;C&#39;,
+ &#39;A&#39;,
+ &#39;B&#39;,
+ &#39;C&#39;,
+ &#39;B&#39;,
+ &#39;D&#39;,
+ &#39;C&#39;,
+ &#39;C&#39;,
+ &#39;D&#39;,
+ &#39;A&#39;,
+ &#39;D&#39;,
+ &#39;C&#39;,
+ &#39;D&#39;,
+ &#39;C&#39;,
+ &#39;C&#39;,
+ &#39;C&#39;,
+ &#39;B&#39;,
+ &#39;B&#39;,
+ &#39;C&#39;,
+ &#39;C&#39;,
+ &#39;D&#39;,
+ &#39;D&#39;,
+ &#39;B&#39;,
+ &#39;C&#39;,
+ &#39;B&#39;,
+ &#39;D&#39;,
+ &#39;C&#39;,
+ &#39;C&#39;,
+ &#39;D&#39;,
+ &#39;C&#39;,
+ &#39;C&#39;,
+ &#39;C&#39;,
+ &#39;D&#39;,
+ &#39;D&#39;,
+ &#39;D&#39;,
+ &#39;C&#39;,
+ &#39;C&#39;,
+ &#39;C&#39;,
+ &#39;D&#39;,
+ &#39;C&#39;,
+ &#39;C&#39;,
+ &#39;B&#39;,
+ &#39;C&#39;,
+ &#39;C&#39;,
+ &#39;C&#39;,
+ &#39;B&#39;,
+ &#39;C&#39;,
+ &#39;C&#39;,
+ &#39;C&#39;,
+ &#39;C&#39;,
+ &#39;C&#39;,
+ &#39;C&#39;,
+ &#39;B&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mengubah array menjadi dataframe perkolom kembali</span>
+<span class="n">df_sepal_length</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">iris_sepal_length</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;sepal_length&quot;</span><span class="p">])</span>
+<span class="n">df_sepal_width</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">iris_sepal_width</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;sepal_width&quot;</span><span class="p">])</span>
+<span class="n">df_petal_length</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">iris_petal_length</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;petal_length&quot;</span><span class="p">])</span>
+<span class="n">df_petal_width</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">iris_petal_width</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;petal_width&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melihat apakah array sudah berubah menjadi dataframe kembali atau tidak</span>
+<span class="n">df_sepal_length</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-1b4f85c7-2fff-4875-b37f-3c7eb5712144">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepal_length</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>C</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>C</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>C</td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td>C</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>B</td>
+    </tr>
+  </tbody>
+</table>
+<p>150 rows × 1 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-1b4f85c7-2fff-4875-b37f-3c7eb5712144')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-1b4f85c7-2fff-4875-b37f-3c7eb5712144 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-1b4f85c7-2fff-4875-b37f-3c7eb5712144');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menggabungkan beberapa kolom dataframen menjadi 1</span>
+<span class="n">df1</span> <span class="o">=</span> <span class="n">df_sepal_length</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df_sepal_width</span><span class="p">)</span>
+<span class="n">df2</span> <span class="o">=</span> <span class="n">df_petal_length</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df_petal_width</span><span class="p">)</span>
+<span class="n">df3</span> <span class="o">=</span> <span class="n">df2</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">iris</span><span class="p">[</span><span class="s2">&quot;species&quot;</span><span class="p">])</span>
+<span class="n">df_new</span> <span class="o">=</span> <span class="n">df1</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mount drive</span>
+<span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount(&quot;/content/drive&quot;, force_remount=True).
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mengatur tempat penyimpanan untuk file csv dari hasil diskritisasi</span>
+<span class="o">%</span><span class="k">cd</span> /content/drive/MyDrive/UNIVERSITAS TRUNOJOYO MADURA/SEMESTER 5/datamining/
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/content/drive/MyDrive/UNIVERSITAS TRUNOJOYO MADURA/SEMESTER 5/datamining
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menyimpan hasil diskritisasi ke dalam file csv dengan nama diskritisasi_huruf_iris.csv</span>
+<span class="n">df_new</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;diskritisasi_huruf_iris.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Membaca file hasil dari Diskritisasi</span>
+<span class="n">iris2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/content/drive/MyDrive/UNIVERSITAS TRUNOJOYO MADURA/SEMESTER 5/datamining/diskritisasi_huruf_iris.csv&quot;</span><span class="p">)</span>
+<span class="n">iris2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-6028c564-1b32-439e-a28e-72a19df33e47">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepal_length</th>
+      <th>sepal_width</th>
+      <th>petal_length</th>
+      <th>petal_width</th>
+      <th>species</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+      <td>C</td>
+      <td>A</td>
+      <td>A</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>A</td>
+      <td>B</td>
+      <td>A</td>
+      <td>A</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>A</td>
+      <td>C</td>
+      <td>A</td>
+      <td>A</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>A</td>
+      <td>B</td>
+      <td>A</td>
+      <td>A</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>A</td>
+      <td>C</td>
+      <td>A</td>
+      <td>A</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>C</td>
+      <td>B</td>
+      <td>C</td>
+      <td>D</td>
+      <td>virginica</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>C</td>
+      <td>A</td>
+      <td>C</td>
+      <td>D</td>
+      <td>virginica</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>C</td>
+      <td>B</td>
+      <td>C</td>
+      <td>D</td>
+      <td>virginica</td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td>C</td>
+      <td>C</td>
+      <td>C</td>
+      <td>D</td>
+      <td>virginica</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>B</td>
+      <td>B</td>
+      <td>C</td>
+      <td>C</td>
+      <td>virginica</td>
+    </tr>
+  </tbody>
+</table>
+<p>150 rows × 5 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-6028c564-1b32-439e-a28e-72a19df33e47')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-6028c564-1b32-439e-a28e-72a19df33e47 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-6028c564-1b32-439e-a28e-72a19df33e47');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
