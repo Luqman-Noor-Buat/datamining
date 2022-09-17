@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Selamat Datang" href="intro.html" />
@@ -360,6 +362,13 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#tugas-2-diskritisasi">
    Tugas 2 - Diskritisasi
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#equal-width">
+     Equal Width
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tugas-3-mengklasifikasi-data-dengan-metode-knn">
@@ -416,6 +425,13 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#tugas-2-diskritisasi">
    Tugas 2 - Diskritisasi
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#equal-width">
+     Equal Width
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tugas-3-mengklasifikasi-data-dengan-metode-knn">
@@ -434,9 +450,9 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="tugas">
 <h1>Tugas<a class="headerlink" href="#tugas" title="Permalink to this headline">#</a></h1>
-<p>Nama : Luqman Noor Buat <br>
+<p><strong>Nama : Luqman Noor Buat <br>
 NIM    : 200411100206 <br>
-Kelas  : Penambangan Data C</p>
+Kelas  : Penambangan Data C</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
@@ -484,6 +500,12 @@ Kelas  : Penambangan Data C</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="tugas-1-menghitung-jarak">
 <h1>Tugas 1 - Menghitung jarak<a class="headerlink" href="#tugas-1-menghitung-jarak" title="Permalink to this headline">#</a></h1>
+<p>Tugas mengukur jarak (<strong>similarity</strong>)</p>
+<ol class="simple">
+<li><p>Mencari dataset dari kaggle atau github</p></li>
+<li><p>Lakukan pengukuran jarak terhadap <span class="math notranslate nohighlight">\( d(1,2), d(1,3), d(1,4) \)</span> dari data tersebut</p></li>
+<li><p>Jika terdapat data numeric dan datanya tidak seimbang, maka perlu dilakukan normalisasi terlebih dahulu</p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import liberary yang diperlukan</span>
@@ -690,7 +712,13 @@ Kelas  : Penambangan Data C</p>
 </div>
 <section id="data-nominal-categorical">
 <h2>Data Nominal/Categorical<a class="headerlink" href="#data-nominal-categorical" title="Permalink to this headline">#</a></h2>
-<p>Nilai atribut nominal adalah simbol ataunama barang. Setiap nilai mewakili beberapa jenis kategori, kode, atau status, dan Atribut nominal juga disebut kategori. Nilai-nilainya tidak memiliki tingkatan nilai. Dalam ilmu komputer, nilainya juga dikenal sebagai enumerasi</p>
+<ul class="simple">
+<li><p>Nilai atribut nominal adalah simbol ataunama barang. Setiap nilai mewakili beberapa jenis kategori, kode, atau status, dan Atribut nominal juga disebut kategori. Nilai-nilainya tidak memiliki tingkatan nilai. Dalam ilmu komputer, nilainya juga dikenal sebagai enumerasi.</p></li>
+<li><p>Melakukan pengukuran terhadap data nominal dengan menggukan rumus :
+$<span class="math notranslate nohighlight">\( d(i,j)=\frac{p - m}p \)</span><span class="math notranslate nohighlight">\(
+\)</span> p <span class="math notranslate nohighlight">\( = jumlah data yang akan dihitung jaraknya&lt;br&gt;
+\)</span> m $ = jumlah data yang sama</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menampilkan data Nominal/Categorical</span>
@@ -878,7 +906,11 @@ Kelas  : Penambangan Data C</p>
 </section>
 <section id="data-numeric">
 <h2>Data Numeric<a class="headerlink" href="#data-numeric" title="Permalink to this headline">#</a></h2>
-<p>Atribut numerik bersifat kuantitatif; Artinya, ini adalah kuantitas yang terukur, yang dinyatakan dengan bilangan bulat atau nilai riel. Atribut numerik dapat Atribut Skala Interval(interval-scaled) atau skala ration (ratio-scaled)</p>
+<ul class="simple">
+<li><p>Atribut numerik bersifat kuantitatif; Artinya, ini adalah kuantitas yang terukur, yang dinyatakan dengan bilangan bulat atau nilai riel. Atribut numerik dapat Atribut Skala Interval(interval-scaled) atau skala ration (ratio-scaled)</p></li>
+<li><p>Melakukan pengukuran terhadap data nominal dengan menggukan rumus Euclian Distance:
+$<span class="math notranslate nohighlight">\( d(i,j) = \sqrt(|{x_{i1} - x_{j1}}|^2 + |{x_{i2} - x_{j2}}|^2 + ... + |{x_{ip} - x_{jp}}|^2) \)</span>$</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menampilkan data numeric</span>
@@ -1217,7 +1249,11 @@ Kelas  : Penambangan Data C</p>
   </div>
 </div></div>
 </div>
-<p>Karena datanya tidak konsisten maka, data perlu dilakukan normalisasi</p>
+<p>Karena datanya tidak konsisten maka, data perlu dilakukan normalisasi dengan menggunakan rumus :
+$<span class="math notranslate nohighlight">\( z=\frac{x - u}o \)</span><span class="math notranslate nohighlight">\(
+\)</span> x <span class="math notranslate nohighlight">\( : Data &lt;br&gt;
+\)</span> u <span class="math notranslate nohighlight">\( : Rata-rata &lt;br&gt;
+\)</span> o $ : Standar deviasi</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Normalisasi data RAM_GB</span>
@@ -1377,7 +1413,8 @@ Name: Selling_Price, dtype: float64
 </div>
 </div>
 </div>
-<p>Melakukan perhitungan berdasarkan rumus Euclidean Distance</p>
+<p>Melakukan perhitungan berdasarkan rumus Euclidean Distance
+$<span class="math notranslate nohighlight">\( d(i,j) = \sqrt(|{x_{i1} - x_{j1}}|^2 + |{x_{i2} - x_{j2}}|^2 + ... + |{x_{ip} - x_{jp}}|^2) \)</span>$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghitung jarak data Numeric dengan cara Euclidean Distance</span>
@@ -1410,6 +1447,11 @@ Name: Selling_Price, dtype: float64
 </section>
 <section id="similarity">
 <h2>Similarity<a class="headerlink" href="#similarity" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Mengukur secara Numerik bagaimana kesamaan dua objek data</p></li>
+<li><p>Tinggi nilainya bila benda yang lebih mirip</p></li>
+<li><p>Range [0,1]</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Jarak d(1,2)</span>
@@ -1453,6 +1495,7 @@ Name: Selling_Price, dtype: float64
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="tugas-2-diskritisasi">
 <h1>Tugas 2 - Diskritisasi<a class="headerlink" href="#tugas-2-diskritisasi" title="Permalink to this headline">#</a></h1>
+<p>Diskritisasi adalah proses merubah dari yang sebelumnya adalah tipe data numeric mejadi tipe data nominal/categorical. Perlu dilakukan diskritisasi karena mesin atau sistem membutuhkan atau mungkin hanya bisa bekerja pada tipe categorical.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import liberary yang diperlukan</span>
@@ -1634,6 +1677,15 @@ Name: Selling_Price, dtype: float64
 </div>
 </div>
 </div>
+<section id="equal-width">
+<h2>Equal Width<a class="headerlink" href="#equal-width" title="Permalink to this headline">#</a></h2>
+<p>Rumus perhitungan yang digunakan menggunakan <strong>Equal Width</strong> yaitu :
+$<span class="math notranslate nohighlight">\( w=\frac{x_{min}-x_{max}}k \)</span>$</p>
+<div class="math notranslate nohighlight">
+\[v_i=x_{min}+i*w\]</div>
+<p><span class="math notranslate nohighlight">\( x \)</span> = nilai <br>
+<span class="math notranslate nohighlight">\( i \)</span> = 1,2,3,.. <br>
+<span class="math notranslate nohighlight">\( k \)</span> = jumlah penglompokan</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Proses diskritisasi sepal_length</span>
@@ -2581,18 +2633,28 @@ Name: petal_width, Length: 150, dtype: float64
 </div></div>
 </div>
 </section>
+</section>
 <section class="tex2jax_ignore mathjax_ignore" id="tugas-3-mengklasifikasi-data-dengan-metode-knn">
 <h1>Tugas 3 - Mengklasifikasi data dengan metode KNN<a class="headerlink" href="#tugas-3-mengklasifikasi-data-dengan-metode-knn" title="Permalink to this headline">#</a></h1>
+<p>Algoritma KNN merupakan algoritma klasifikasi yang bekerja dengan mengambil sejumlah K data terdekat (tetangganya) sebagai acuan untuk menentukan kelas dari data baru. Algoritma ini mengklasifikasikan data berdasarkan similarity atau kemiripan atau kedekatannya terhadap data lainnya. Proses dari algoritma KNN yaitu :</p>
+<ul class="simple">
+<li><p>Menentukan nilai K</p></li>
+<li><p>Menghitung jarak antara data uji dan data latih</p></li>
+<li><p>Mengurutkan jarak dari kecil ke besar</p></li>
+<li><p>Menentukan K terdekat</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import fungsi load_iris dari modul dataset</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Membuat bunch object yang terhubung dengan iris dataset dan atributnya</span>
+<span class="n">data_iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -2611,7 +2673,8 @@ Name: petal_width, Length: 150, dtype: float64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_iris</span><span class="o">.</span><span class="n">data</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menampilkan data iris</span>
+<span class="n">data_iris</span><span class="o">.</span><span class="n">data</span>
 </pre></div>
 </div>
 </div>
@@ -2772,7 +2835,8 @@ Name: petal_width, Length: 150, dtype: float64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">data_iris</span><span class="o">.</span><span class="n">feature_names</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melihat nama kolomnya yang berjumlah 4</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data_iris</span><span class="o">.</span><span class="n">feature_names</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2784,7 +2848,8 @@ Name: petal_width, Length: 150, dtype: float64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">data_iris</span><span class="o">.</span><span class="n">target</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Representasi dengan angka dari spesies yang ada didataset yaitu 0 = setosa, 1 = versiecolor, dan 2 = virginica</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data_iris</span><span class="o">.</span><span class="n">target</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2800,7 +2865,8 @@ Name: petal_width, Length: 150, dtype: float64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">data_iris</span><span class="o">.</span><span class="n">target_names</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menampilkan 3 class yang menjadi target</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data_iris</span><span class="o">.</span><span class="n">target_names</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2814,8 +2880,6 @@ Name: petal_width, Length: 150, dtype: float64
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">data_iris</span><span class="o">.</span><span class="n">data</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">data_iris</span><span class="o">.</span><span class="n">target</span><span class="p">))</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">data_iris</span><span class="o">.</span><span class="n">data</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">data_iris</span><span class="o">.</span><span class="n">target</span>
 </pre></div>
 </div>
 </div>
@@ -2828,7 +2892,17 @@ Name: petal_width, Length: 150, dtype: float64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">data_iris</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menyimpan data dan target dalam variabel X dan y</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">data_iris</span><span class="o">.</span><span class="n">data</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">data_iris</span><span class="o">.</span><span class="n">target</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menampilkan jumlah baris dan kolom dari dataset</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data_iris</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2840,7 +2914,8 @@ Name: petal_width, Length: 150, dtype: float64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melakukan pemisahan data menjadi data training dan data uji (80:20)</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2848,7 +2923,8 @@ Name: petal_width, Length: 150, dtype: float64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melihat jumlah baris dan kolom dari data training dan data uji</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2862,7 +2938,8 @@ Name: petal_width, Length: 150, dtype: float64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Membentuk objek y baru</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">y_test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2876,10 +2953,13 @@ Name: petal_width, Length: 150, dtype: float64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melakukan import class KNeighborsClassifier dari sklearn</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
 
+<span class="c1"># Import model metrics untuk mengecek akurasinya</span>
 <span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
 
+<span class="c1"># Mencoba untuk menjalankan dari k=1 melalui 25 dan mencatat akurasi uji nya</span>
 <span class="n">k_range</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">26</span><span class="p">)</span>
 <span class="n">scores</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="n">scores_list</span> <span class="o">=</span> <span class="p">[]</span>
@@ -2898,6 +2978,7 @@ Name: petal_width, Length: 150, dtype: float64
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
+<span class="c1"># Membuat relasi antara K dan akurasi ujinya</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k_range</span><span class="p">,</span><span class="n">scores_list</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;value of K for KNN&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Testing Accuracy&quot;</span><span class="p">)</span>
@@ -2908,7 +2989,7 @@ Name: petal_width, Length: 150, dtype: float64
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Testing Accuracy&#39;)
 </pre></div>
 </div>
-<img alt="_images/notebooks_62_1.png" src="_images/notebooks_62_1.png" />
+<img alt="_images/notebooks_64_1.png" src="_images/notebooks_64_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -2926,8 +3007,11 @@ Name: petal_width, Length: 150, dtype: float64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">classes</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s1">&#39;sentosa&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="s1">&#39;versicolor&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="s1">&#39;virginica&#39;</span><span class="p">}</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Class yang ada yaitu 0=setosa, 1=versicolor, 2=virginica</span>
+<span class="n">classes</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s1">&#39;sentosa&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="s1">&#39;versicolor&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="s1">&#39;virginica&#39;</span><span class="p">}</span>
 
+<span class="c1"># Membuat prediksi beberapa data yang tidak terlihat</span>
+<span class="c1"># Memprediksi 2 terbawah dari observasi secara acak </span>
 <span class="n">x_new</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
          <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span>
 <span class="n">y_predict</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_new</span><span class="p">)</span>
