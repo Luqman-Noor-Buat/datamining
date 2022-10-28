@@ -453,7 +453,7 @@ title="Print to PDF"
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#mengubah-data-categorical-menjadi-numeric-dengan-menggunakan-teknik-one-hot-encoding">
-       Mengubah data categorical menjadi numeric dengan menggunakan teknik One Hot Encoding
+       Mengubah data categorical menjadi numeric dengan menggunakan teknik One-Hot Encoding
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
@@ -702,7 +702,7 @@ title="Print to PDF"
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#mengubah-data-categorical-menjadi-numeric-dengan-menggunakan-teknik-one-hot-encoding">
-       Mengubah data categorical menjadi numeric dengan menggunakan teknik One Hot Encoding
+       Mengubah data categorical menjadi numeric dengan menggunakan teknik One-Hot Encoding
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
@@ -7279,7 +7279,7 @@ Precision :  0.7586206896551724
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># membaca Breast Cancer Coimbra DataSet </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Membaca dataset kredit</span>
 <span class="n">kredit</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/Luqman-Noor-Buat/datamining/main/credit_score.csv&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -7294,7 +7294,7 @@ Precision :  0.7586206896551724
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-973992dd-844c-4214-9e2d-42643e9587a1">
+  <div id="df-c5ce9e78-9b08-4272-b15c-14caa67c156f">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -7383,7 +7383,7 @@ Precision :  0.7586206896551724
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-973992dd-844c-4214-9e2d-42643e9587a1')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-c5ce9e78-9b08-4272-b15c-14caa67c156f')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -7434,12 +7434,12 @@ Precision :  0.7586206896551724
 
       <script>
         const buttonEl =
-          document.querySelector('#df-973992dd-844c-4214-9e2d-42643e9587a1 button.colab-df-convert');
+          document.querySelector('#df-c5ce9e78-9b08-4272-b15c-14caa67c156f button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-973992dd-844c-4214-9e2d-42643e9587a1');
+          const element = document.querySelector('#df-c5ce9e78-9b08-4272-b15c-14caa67c156f');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -7474,10 +7474,10 @@ Precision :  0.7586206896551724
 </div>
 </div>
 <section id="mengubah-data-categorical-menjadi-numeric-dengan-menggunakan-teknik-one-hot-encoding">
-<h3>Mengubah data categorical menjadi numeric dengan menggunakan teknik One Hot Encoding<a class="headerlink" href="#mengubah-data-categorical-menjadi-numeric-dengan-menggunakan-teknik-one-hot-encoding" title="Permalink to this headline">#</a></h3>
+<h3>Mengubah data categorical menjadi numeric dengan menggunakan teknik One-Hot Encoding<a class="headerlink" href="#mengubah-data-categorical-menjadi-numeric-dengan-menggunakan-teknik-one-hot-encoding" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mengambil kolom KPR aktif mentranformasi menggunakan one hot encoding</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mengambil kolom KPR aktif dan mentranformasi menggunakan one-hot encoding</span>
 <span class="n">kpr_aktif</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">kredit</span><span class="p">[</span><span class="s2">&quot;kpr_aktif&quot;</span><span class="p">])</span>
 <span class="n">kpr_aktif</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
@@ -7485,7 +7485,7 @@ Precision :  0.7586206896551724
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-ab426fd2-92e5-45d5-9e67-31fcfbd7cfb0">
+  <div id="df-12b5f395-ace1-4a6d-8275-4ca16a6eed6e">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -7538,7 +7538,7 @@ Precision :  0.7586206896551724
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-ab426fd2-92e5-45d5-9e67-31fcfbd7cfb0')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-12b5f395-ace1-4a6d-8275-4ca16a6eed6e')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -7589,12 +7589,12 @@ Precision :  0.7586206896551724
 
       <script>
         const buttonEl =
-          document.querySelector('#df-ab426fd2-92e5-45d5-9e67-31fcfbd7cfb0 button.colab-df-convert');
+          document.querySelector('#df-12b5f395-ace1-4a6d-8275-4ca16a6eed6e button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-ab426fd2-92e5-45d5-9e67-31fcfbd7cfb0');
+          const element = document.querySelector('#df-12b5f395-ace1-4a6d-8275-4ca16a6eed6e');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -7617,7 +7617,7 @@ Precision :  0.7586206896551724
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mengambil kolom Rata-rata overdue mentranformasi menggunakan one hot encoding</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mengambil kolom Rata-rata overdue dan mentranformasi menggunakan one-hot encoding</span>
 <span class="n">rata_rata_overdue</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">kredit</span><span class="p">[</span><span class="s2">&quot;rata_rata_overdue&quot;</span><span class="p">])</span>
 <span class="n">rata_rata_overdue</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
@@ -7625,7 +7625,7 @@ Precision :  0.7586206896551724
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-ea697d56-93e1-4888-8357-230d3a9d508c">
+  <div id="df-25c9ac2f-b468-4088-89f8-a6e1767b45dc">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -7696,7 +7696,7 @@ Precision :  0.7586206896551724
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-ea697d56-93e1-4888-8357-230d3a9d508c')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-25c9ac2f-b468-4088-89f8-a6e1767b45dc')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -7747,12 +7747,12 @@ Precision :  0.7586206896551724
 
       <script>
         const buttonEl =
-          document.querySelector('#df-ea697d56-93e1-4888-8357-230d3a9d508c button.colab-df-convert');
+          document.querySelector('#df-25c9ac2f-b468-4088-89f8-a6e1767b45dc button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-ea697d56-93e1-4888-8357-230d3a9d508c');
+          const element = document.querySelector('#df-25c9ac2f-b468-4088-89f8-a6e1767b45dc');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -7783,7 +7783,7 @@ Precision :  0.7586206896551724
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-e07c44a3-cb30-4f69-8c73-9afafbface0a">
+  <div id="df-b50fe383-a396-4123-a408-6d691b2c91ae">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -7854,7 +7854,7 @@ Precision :  0.7586206896551724
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-e07c44a3-cb30-4f69-8c73-9afafbface0a')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-b50fe383-a396-4123-a408-6d691b2c91ae')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -7905,12 +7905,12 @@ Precision :  0.7586206896551724
 
       <script>
         const buttonEl =
-          document.querySelector('#df-e07c44a3-cb30-4f69-8c73-9afafbface0a button.colab-df-convert');
+          document.querySelector('#df-b50fe383-a396-4123-a408-6d691b2c91ae button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-e07c44a3-cb30-4f69-8c73-9afafbface0a');
+          const element = document.querySelector('#df-b50fe383-a396-4123-a408-6d691b2c91ae');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -7941,7 +7941,7 @@ Precision :  0.7586206896551724
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-45826bfd-379d-4064-bd24-2e5c5959d6c1">
+  <div id="df-ad6d3dfa-2528-48ac-8ddd-c2f110e851f2">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -8054,7 +8054,7 @@ Precision :  0.7586206896551724
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-45826bfd-379d-4064-bd24-2e5c5959d6c1')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-ad6d3dfa-2528-48ac-8ddd-c2f110e851f2')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -8105,12 +8105,12 @@ Precision :  0.7586206896551724
 
       <script>
         const buttonEl =
-          document.querySelector('#df-45826bfd-379d-4064-bd24-2e5c5959d6c1 button.colab-df-convert');
+          document.querySelector('#df-ad6d3dfa-2528-48ac-8ddd-c2f110e851f2 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-45826bfd-379d-4064-bd24-2e5c5959d6c1');
+          const element = document.querySelector('#df-ad6d3dfa-2528-48ac-8ddd-c2f110e851f2');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -8145,11 +8145,11 @@ Precision :  0.7586206896551724
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>
-<span class="c1"># scale features</span>
+<span class="c1"># melakukan skala fitur</span>
 <span class="n">scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>
 <span class="n">model</span> <span class="o">=</span><span class="n">scaler</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">normalisasi</span><span class="p">)</span>
 <span class="n">scaled_data</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">normalisasi</span><span class="p">)</span>
-<span class="c1"># print scaled features</span>
+<span class="c1"># menampilkan skala fitur</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">scaled_data</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -8168,7 +8168,7 @@ Precision :  0.7586206896551724
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># menampilkan data normalisasi</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># menampilkan data normalisasi dari Min Max</span>
 <span class="n">namakolom</span> <span class="o">=</span> <span class="n">normalisasi</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span>
 <span class="n">dataMinMax</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">scaled_data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">namakolom</span><span class="p">)</span>
 <span class="n">dataMinMax</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -8177,7 +8177,7 @@ Precision :  0.7586206896551724
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-fcd92c86-d402-4d61-ad3e-bba172376733">
+  <div id="df-851d16d8-f75a-4f7e-af6f-2219fff5141f">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -8278,7 +8278,7 @@ Precision :  0.7586206896551724
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-fcd92c86-d402-4d61-ad3e-bba172376733')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-851d16d8-f75a-4f7e-af6f-2219fff5141f')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -8329,12 +8329,12 @@ Precision :  0.7586206896551724
 
       <script>
         const buttonEl =
-          document.querySelector('#df-fcd92c86-d402-4d61-ad3e-bba172376733 button.colab-df-convert');
+          document.querySelector('#df-851d16d8-f75a-4f7e-af6f-2219fff5141f button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-fcd92c86-d402-4d61-ad3e-bba172376733');
+          const element = document.querySelector('#df-851d16d8-f75a-4f7e-af6f-2219fff5141f');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -8360,11 +8360,11 @@ Precision :  0.7586206896551724
 <h3>Normalisasi dengan Min=1 Max=2<a class="headerlink" href="#normalisasi-dengan-min-1-max-2" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Min Max Scale dengan Min = 1 dan Max =2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Min Max Scale dengan Min=1 dan Max=2</span>
 <span class="n">scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">(</span><span class="n">feature_range</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
 <span class="n">model</span> <span class="o">=</span><span class="n">scaler</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">normalisasi</span><span class="p">)</span>
 <span class="n">scaled_data2</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">normalisasi</span><span class="p">)</span>
-<span class="c1"># print scaled features</span>
+<span class="c1"># Menampilkan skala fitur</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">scaled_data2</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -8383,14 +8383,15 @@ Precision :  0.7586206896551724
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataMinMax2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">scaled_data2</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">normalisasi</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menampilkan data normalisasi dari Min=1 Max=2</span>
+<span class="n">dataMinMax2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">scaled_data2</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">normalisasi</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
 <span class="n">dataMinMax2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-10dfadf9-d069-451d-a14b-09b8d314d14c">
+  <div id="df-9b55fdfc-0e41-4c93-981b-d42be5e92234">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -8491,7 +8492,7 @@ Precision :  0.7586206896551724
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-10dfadf9-d069-451d-a14b-09b8d314d14c')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-9b55fdfc-0e41-4c93-981b-d42be5e92234')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -8542,12 +8543,12 @@ Precision :  0.7586206896551724
 
       <script>
         const buttonEl =
-          document.querySelector('#df-10dfadf9-d069-451d-a14b-09b8d314d14c button.colab-df-convert');
+          document.querySelector('#df-9b55fdfc-0e41-4c93-981b-d42be5e92234 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-10dfadf9-d069-451d-a14b-09b8d314d14c');
+          const element = document.querySelector('#df-9b55fdfc-0e41-4c93-981b-d42be5e92234');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -8573,7 +8574,7 @@ Precision :  0.7586206896551724
 <h3>Normalisasi dengan Z score<a class="headerlink" href="#normalisasi-dengan-z-score" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Z Score atau StandardScaler</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melakukan normalisasi dengan Z Score atau StandardScaler</span>
 <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
 <span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
 <span class="n">model</span> <span class="o">=</span> <span class="p">(</span><span class="n">scaler</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">normalisasi</span><span class="p">))</span>
@@ -8603,14 +8604,15 @@ Precision :  0.7586206896551724
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataZScale</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">scale_data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">normalisasi</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menampilkan data normalisasi dari Z score</span>
+<span class="n">dataZScale</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">scale_data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">normalisasi</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
 <span class="n">dataZScale</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-d2dfc29c-7b49-4a50-923c-f98e577fe698">
+  <div id="df-e221a16f-3aa0-43ac-b6ad-a1ee99bb1aee">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -8711,7 +8713,7 @@ Precision :  0.7586206896551724
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-d2dfc29c-7b49-4a50-923c-f98e577fe698')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-e221a16f-3aa0-43ac-b6ad-a1ee99bb1aee')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -8762,12 +8764,12 @@ Precision :  0.7586206896551724
 
       <script>
         const buttonEl =
-          document.querySelector('#df-d2dfc29c-7b49-4a50-923c-f98e577fe698 button.colab-df-convert');
+          document.querySelector('#df-e221a16f-3aa0-43ac-b6ad-a1ee99bb1aee button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-d2dfc29c-7b49-4a50-923c-f98e577fe698');
+          const element = document.querySelector('#df-e221a16f-3aa0-43ac-b6ad-a1ee99bb1aee');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -8793,14 +8795,15 @@ Precision :  0.7586206896551724
 <h3>Menggabungkan kolom yang telah di normalisasi<a class="headerlink" href="#menggabungkan-kolom-yang-telah-di-normalisasi" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_kontrak_risk</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">kredit</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;kode_kontrak&#39;</span><span class="p">,</span><span class="s1">&#39;risk_rating&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mengambil kolom kode_kontak dan risk_rating</span>
+<span class="n">data_kontrak_risk</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">kredit</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;kode_kontrak&#39;</span><span class="p">,</span><span class="s1">&#39;risk_rating&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menggabungkan kolom yang sudah dinormalisasi Min Maxdan data sebelumnya</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menggabungkan kolom yang sudah dinormalisasi Min Max dan data sebelumnya</span>
 <span class="n">kredit_min_max</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">data_kontrak_risk</span><span class="p">,</span> <span class="n">dataMinMax</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">kredit_min_max</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
@@ -8808,7 +8811,7 @@ Precision :  0.7586206896551724
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-f1e71641-3561-4b5c-92b3-f894d4537e4e">
+  <div id="df-7f0b59f0-908c-485a-93f7-bc773d323842">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -8921,7 +8924,7 @@ Precision :  0.7586206896551724
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-f1e71641-3561-4b5c-92b3-f894d4537e4e')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-7f0b59f0-908c-485a-93f7-bc773d323842')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -8972,12 +8975,12 @@ Precision :  0.7586206896551724
 
       <script>
         const buttonEl =
-          document.querySelector('#df-f1e71641-3561-4b5c-92b3-f894d4537e4e button.colab-df-convert');
+          document.querySelector('#df-7f0b59f0-908c-485a-93f7-bc773d323842 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-f1e71641-3561-4b5c-92b3-f894d4537e4e');
+          const element = document.querySelector('#df-7f0b59f0-908c-485a-93f7-bc773d323842');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -9008,7 +9011,7 @@ Precision :  0.7586206896551724
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-7b96f38b-6117-490f-93e6-a92b971997c4">
+  <div id="df-4b528daa-9142-4e40-820f-915bb9b926e1">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -9121,7 +9124,7 @@ Precision :  0.7586206896551724
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-7b96f38b-6117-490f-93e6-a92b971997c4')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-4b528daa-9142-4e40-820f-915bb9b926e1')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -9172,12 +9175,12 @@ Precision :  0.7586206896551724
 
       <script>
         const buttonEl =
-          document.querySelector('#df-7b96f38b-6117-490f-93e6-a92b971997c4 button.colab-df-convert');
+          document.querySelector('#df-4b528daa-9142-4e40-820f-915bb9b926e1 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-7b96f38b-6117-490f-93e6-a92b971997c4');
+          const element = document.querySelector('#df-4b528daa-9142-4e40-820f-915bb9b926e1');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -9208,7 +9211,7 @@ Precision :  0.7586206896551724
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-164f46f4-8cfc-4d30-892c-c4285dd5deb3">
+  <div id="df-d47e6e34-3dca-4ee4-a199-0f7903e89271">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -9321,7 +9324,7 @@ Precision :  0.7586206896551724
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-164f46f4-8cfc-4d30-892c-c4285dd5deb3')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-d47e6e34-3dca-4ee4-a199-0f7903e89271')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -9372,12 +9375,12 @@ Precision :  0.7586206896551724
 
       <script>
         const buttonEl =
-          document.querySelector('#df-164f46f4-8cfc-4d30-892c-c4285dd5deb3 button.colab-df-convert');
+          document.querySelector('#df-d47e6e34-3dca-4ee4-a199-0f7903e89271 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-164f46f4-8cfc-4d30-892c-c4285dd5deb3');
+          const element = document.querySelector('#df-d47e6e34-3dca-4ee4-a199-0f7903e89271');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -9471,7 +9474,8 @@ Precision :  0.7586206896551724
 <h2>Naive Bayes<a class="headerlink" href="#naive-bayes" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">make_scorer</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">,</span><span class="n">precision_score</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melakukan import library yang diperlukan</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">make_scorer</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">,</span><span class="n">precision_score</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span> <span class="p">,</span><span class="n">precision_score</span><span class="p">,</span><span class="n">recall_score</span><span class="p">,</span><span class="n">f1_score</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">KFold</span><span class="p">,</span><span class="n">train_test_split</span><span class="p">,</span><span class="n">cross_val_score</span>
@@ -9485,7 +9489,7 @@ Precision :  0.7586206896551724
 <h3>Naive Bayes dengan normalisasi Min Max<a class="headerlink" href="#naive-bayes-dengan-normalisasi-min-max" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghitung akurasi presisi dari naive bayes</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghitung akurasi presisi dari naive bayes dengan normalisasi min max</span>
 <span class="n">gaussian</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
 <span class="n">gaussian</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_trainn_min_max</span><span class="p">,</span> <span class="n">y_trainn_min_max</span><span class="p">)</span>
 <span class="n">Y_predn_min_max</span> <span class="o">=</span> <span class="n">gaussian</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_testn_min_max</span><span class="p">)</span> 
@@ -9525,7 +9529,7 @@ f1-score Naive Bayes : 0.993
 <h3>Naive Bayes dengan normalisasi Min=1 Max=2<a class="headerlink" href="#naive-bayes-dengan-normalisasi-min-1-max-2" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghitung akurasi presisi dari naive bayes</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghitung akurasi presisi dari naive bayes dengan normalisasi min=1 dan max=2</span>
 <span class="n">gaussian</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
 <span class="n">gaussian</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_trainn_min1_max2</span><span class="p">,</span> <span class="n">y_trainn_min1_max2</span><span class="p">)</span>
 <span class="n">Y_predn_min1_max2</span> <span class="o">=</span> <span class="n">gaussian</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_testn_min1_max2</span><span class="p">)</span> 
@@ -9565,7 +9569,7 @@ f1-score Naive Bayes : 0.993
 <h3>Naive Bayes dengan normalisasi Z score<a class="headerlink" href="#naive-bayes-dengan-normalisasi-z-score" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghitung akurasi presisi dari naive bayes</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghitung akurasi presisi dari naive bayes dengan normalisasi Z score</span>
 <span class="n">gaussian</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
 <span class="n">gaussian</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_trainn_Zscore</span><span class="p">,</span> <span class="n">y_trainn_Zscore</span><span class="p">)</span>
 <span class="n">Y_predn_Zscore</span> <span class="o">=</span> <span class="n">gaussian</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_testn_Zscore</span><span class="p">)</span> 
@@ -9608,7 +9612,8 @@ f1-score Naive Bayes : 0.993
 <h3>KNN dengan normalisasi Min Max<a class="headerlink" href="#knn-dengan-normalisasi-min-max" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghitung akurasi dari KNN dengan normalisasi min max</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
 <span class="n">neigh</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">neigh</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_trainn_min_max</span><span class="p">,</span> <span class="n">y_trainn_min_max</span><span class="p">)</span>
 
@@ -9628,7 +9633,8 @@ f1-score Naive Bayes : 0.993
 <h3>KNN dengan normalisasi Min=1 Max=2<a class="headerlink" href="#knn-dengan-normalisasi-min-1-max-2" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghitung akurasi dari KNN dengan normalisasi min=1 max=2</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
 <span class="n">neigh</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">neigh</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_trainn_min1_max2</span><span class="p">,</span> <span class="n">y_trainn_min1_max2</span><span class="p">)</span>
 
@@ -9648,7 +9654,8 @@ f1-score Naive Bayes : 0.993
 <h3>KNN dengan normalisasi Z score<a class="headerlink" href="#knn-dengan-normalisasi-z-score" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghitung akurasi dari KNN dengan normalisasi Z score</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
 <span class="n">neigh</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">neigh</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_trainn_Zscore</span><span class="p">,</span> <span class="n">y_trainn_Zscore</span><span class="p">)</span>
 
@@ -9669,7 +9676,8 @@ f1-score Naive Bayes : 0.993
 <h2>Decision Tree<a class="headerlink" href="#decision-tree" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import library yang diperlukan di Decision Tree</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
 <span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">tree</span>
 <span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
 <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
@@ -9681,7 +9689,7 @@ f1-score Naive Bayes : 0.993
 <h3>Decision Tree dengan normalisasi Min Max<a class="headerlink" href="#decision-tree-dengan-normalisasi-min-max" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghitung akurasi dengan menggunakan gini indek</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghitung akurasi dengan menggunakan gini indek dengan normalisasi min max</span>
 <span class="n">clf</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">criterion</span><span class="o">=</span><span class="s2">&quot;gini&quot;</span><span class="p">)</span>
 <span class="n">clf</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_trainn_min_max</span><span class="p">,</span> <span class="n">y_trainn_min_max</span><span class="p">)</span>
 
@@ -9701,7 +9709,7 @@ f1-score Naive Bayes : 0.993
 <h3>Decision Tree dengan normalisasi Min=1 Max=2<a class="headerlink" href="#decision-tree-dengan-normalisasi-min-1-max-2" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghitung akurasi dengan menggunakan gini indek</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghitung akurasi dengan menggunakan gini indek dengan normalisasi min=1 max=2</span>
 <span class="n">clf</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">criterion</span><span class="o">=</span><span class="s2">&quot;gini&quot;</span><span class="p">)</span>
 <span class="n">clf</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_trainn_min1_max2</span><span class="p">,</span> <span class="n">y_trainn_min1_max2</span><span class="p">)</span>
 
@@ -9721,7 +9729,7 @@ f1-score Naive Bayes : 0.993
 <h3>Decision Tree dengan normalisasi Z score<a class="headerlink" href="#decision-tree-dengan-normalisasi-z-score" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghitung akurasi dengan menggunakan gini indek</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghitung akurasi dengan menggunakan gini indek dengan normalisasi Z score</span>
 <span class="n">clf</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">criterion</span><span class="o">=</span><span class="s2">&quot;gini&quot;</span><span class="p">)</span>
 <span class="n">clf</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_trainn_Zscore</span><span class="p">,</span> <span class="n">y_trainn_Zscore</span><span class="p">)</span>
 
